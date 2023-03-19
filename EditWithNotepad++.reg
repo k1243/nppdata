@@ -1,0 +1,42 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus]
+"MUIVerb"="Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+"SubCommands"=""
+
+
+; Edit with
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus\shell\EditWith]
+"MUIVerb"="Edit with Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus\shell\EditWith\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" \"%1\"\""
+
+
+; Edit with in new instance
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus\shell\EditWithNewInstance]
+"MUIVerb"="Edit with Notepad++ (new instance)"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus\shell\EditWithNewInstance\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession \"%1\"\""
+
+
+; Open folder as workspace
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\NotepadPlusPlus]
+"MUIVerb"="Open folder as workspace in Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\NotepadPlusPlus\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession -openFoldersAsWorkspace \"%V\"\""
+
+
+; Open folder as workspace (right click on background)
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus]
+"MUIVerb"="Open folder as workspace in Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession -openFoldersAsWorkspace \"%V\"\""
