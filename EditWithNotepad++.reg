@@ -1,5 +1,6 @@
 Windows Registry Editor Version 5.00
 
+; Right click on file
 [HKEY_CURRENT_USER\SOFTWARE\Classes\*\shell\NotepadPlusPlus]
 "MUIVerb"="Notepad++"
 "Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
@@ -24,6 +25,9 @@ Windows Registry Editor Version 5.00
 @="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession \"%1\"\""
 
 
+
+
+; Right click on folder
 ; Open folder as workspace
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\shell\NotepadPlusPlus]
 "MUIVerb"="Open folder as workspace in Notepad++"
@@ -33,10 +37,37 @@ Windows Registry Editor Version 5.00
 @="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession -openFoldersAsWorkspace \"%V\"\""
 
 
-; Open folder as workspace (right click on background)
+
+
+; Right click on background
 [HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus]
+"MUIVerb"="Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+"SubCommands"=""
+
+
+; Open notepad++
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\Open]
+"MUIVerb"="Open Notepad++"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\Open\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\"\""
+
+
+; Open notepad++ (new instance)
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\OpenNewInstance]
+"MUIVerb"="Open Notepad++ (new instance)"
+"Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\OpenNewInstance\command]
+@="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession\""
+
+
+; Open folder as workspace
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\OpenNewWorkspace]
 "MUIVerb"="Open folder as workspace in Notepad++"
 "Icon"="E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe,0"
 
-[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\command]
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Directory\Background\shell\NotepadPlusPlus\shell\OpenNewWorkspace\command]
 @="cmd /c \"start \"\" \"E:/Applications/Notepad++/npp.8.5.portable.minimalist.x64/notepad++.exe\" -multiInst -nosession -openFoldersAsWorkspace \"%V\"\""
